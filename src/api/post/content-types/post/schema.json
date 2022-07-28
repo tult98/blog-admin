@@ -13,10 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
-    },
-    "content": {
-      "type": "text"
+      "type": "string",
+      "required": true
     },
     "category": {
       "type": "relation",
@@ -31,11 +29,16 @@
       "inversedBy": "posts"
     },
     "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
     }
   }
 }
