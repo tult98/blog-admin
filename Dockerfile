@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-RUN yarn config set network-timeout 600000 -g && yarn install
+RUN yarn install
 
 
 RUN yarn build
