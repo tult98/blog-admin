@@ -16,17 +16,11 @@
       "type": "string",
       "required": true
     },
-    "slug": {
-      "type": "string",
-      "required": true
-    },
     "coverImage": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "content": {
       "type": "richtext",
