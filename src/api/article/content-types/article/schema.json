@@ -20,7 +20,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "content": {
       "type": "richtext",
@@ -41,6 +43,10 @@
     "preface": {
       "type": "text",
       "required": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

@@ -20,15 +20,15 @@
       "type": "text",
       "required": true
     },
-    "slug": {
-      "type": "string",
-      "required": true
-    },
     "articles": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::article.article",
       "mappedBy": "category"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }
