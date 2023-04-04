@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
@@ -10,6 +10,8 @@ interface Props {
 }
 
 const Editor = ({ name, value, onChange, onUpload }: Props) => {
+  const [toolBarHeight, setToolbarHeight] = useState<number>(66);
+
   const modules = useMemo(() => {
     return {
       toolbar: {
@@ -34,15 +36,32 @@ const Editor = ({ name, value, onChange, onUpload }: Props) => {
       },
     };
   }, []);
+
+  useEffect(() => {
+    const toolBar = document.getElementsByClassName("ql-toolbar ql-snow")[0];
+    if (toolBar) {
+      setToolbarHeight(toolBar.clientHeight);
+    }
+  }, []);
+
   return (
-    <ReactQuill
-      theme="snow"
-      value={value}
-      modules={modules}
-      onChange={(content, event, editor) => {
-        onChange({ target: { name, value: content } });
+    <div
+      style={{
+        minHeight: "300px",
+        display: "flex",
+        paddingBottom: `${toolBarHeight}px`,
       }}
-    />
+    >
+      <ReactQuill
+        theme="snow"
+        value={value}
+        modules={modules}
+        bounds={"#parent"}
+        onChange={(content, event, editor) => {
+          onChange({ target: { name, value: content } });
+        }}
+      />
+    </div>
   );
 };
 

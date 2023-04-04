@@ -1,6 +1,6 @@
+import { Field, FieldLabel, Flex, Stack } from "@strapi/design-system";
+import { prefixFileUrlWithBackendUrl, useLibrary } from "@strapi/helper-plugin";
 import React, { useState } from "react";
-import { Button, Stack, Flex, Field, FieldLabel } from "@strapi/design-system";
-import { useLibrary, prefixFileUrlWithBackendUrl } from "@strapi/helper-plugin";
 import Editor from "../QuillEditor";
 
 interface Props {
@@ -18,7 +18,7 @@ const Wysiwyg = ({ name, onChange, value }: Props) => {
     setShowMediaLibDialog(!showMediaLibDialog);
   };
 
-  const handleSelectAssets = (files) => {
+  const handleSelectAssets = (files: any[]) => {
     const formattedFiles = files.map((file) => ({
       alt: file.alternativeText || file.name,
       url: prefixFileUrlWithBackendUrl(file.url),
@@ -39,9 +39,6 @@ const Wysiwyg = ({ name, onChange, value }: Props) => {
   return (
     <div>
       <Field name={name}>
-        {/* <Button variant="secondary" onClick={handleToggleMediaLibDialog}>
-          MediaLib
-        </Button> */}
         <Stack size={2} padding={2}>
           <Flex>
             <FieldLabel>{name}</FieldLabel>
