@@ -11,8 +11,16 @@
     "@strapi/design-system": "^1.6.3",
     "@strapi/helper-plugin": "^4.6.0",
     "@strapi/icons": "^1.6.3",
+    "@styled-icons/boxicons-regular": "^10.47.0",
+    "@styled-icons/foundation": "^10.46.0",
+    "@styled-icons/material": "^10.47.0",
+    "@udecode/plate": "^20.6.3",
+    "@udecode/plate-test-utils": "^13.4.0",
     "prop-types": "^15.7.2",
-    "react-quill": "^2.0.0"
+    "slate": "^0.93.0",
+    "slate-history": "^0.93.0",
+    "slate-hyperscript": "^0.77.0",
+    "slate-react": "^0.93.0"
   },
   "devDependencies": {
     "@strapi/typescript-utils": "^4.6.0",
@@ -20,10 +28,10 @@
     "@types/react-dom": "^17.0.18",
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.26",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "^5.3.4",
-    "styled-components": "^5.3.6",
+    "styled-components": "^5.3.9",
     "typescript": "4.6.3"
   },
   "peerDependencies": {

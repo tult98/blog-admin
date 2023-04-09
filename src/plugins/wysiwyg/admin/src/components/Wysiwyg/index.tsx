@@ -1,7 +1,7 @@
 import { Field, FieldLabel, Flex, Stack } from "@strapi/design-system";
 import { prefixFileUrlWithBackendUrl, useLibrary } from "@strapi/helper-plugin";
 import React, { useState } from "react";
-import Editor from "../QuillEditor";
+import PlateEditor from "../PlateEditor";
 
 interface Props {
   name: string;
@@ -43,12 +43,7 @@ const Wysiwyg = ({ name, onChange, value }: Props) => {
           <Flex>
             <FieldLabel>{name}</FieldLabel>
           </Flex>
-          <Editor
-            name={name}
-            onChange={onChange}
-            value={value}
-            onUpload={handleToggleMediaLibDialog}
-          />
+          <PlateEditor />
         </Stack>
         {showMediaLibDialog && (
           <MediaLibDialog

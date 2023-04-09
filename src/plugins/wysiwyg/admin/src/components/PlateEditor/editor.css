@@ -1,0 +1,12 @@
+ol,
+ul {
+  list-style: revert !important;
+}
+
+strong {
+  font-weight: revert !important;
+}
+
+em {
+  font-style: revert !important;
+}
