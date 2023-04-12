@@ -1,0 +1,11 @@
+strong {
+  font-weight: revert;
+}
+
+em {
+  font-style: revert;
+}
+
+.ql-editor {
+  height: 300px !important;
+}

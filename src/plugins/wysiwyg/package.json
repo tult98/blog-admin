@@ -11,16 +11,7 @@
     "@strapi/design-system": "^1.6.3",
     "@strapi/helper-plugin": "^4.6.0",
     "@strapi/icons": "^1.6.3",
-    "@styled-icons/boxicons-regular": "^10.47.0",
-    "@styled-icons/foundation": "^10.46.0",
-    "@styled-icons/material": "^10.47.0",
-    "@udecode/plate": "^20.6.3",
-    "@udecode/plate-test-utils": "^13.4.0",
-    "prop-types": "^15.7.2",
-    "slate": "^0.93.0",
-    "slate-history": "^0.93.0",
-    "slate-hyperscript": "^0.77.0",
-    "slate-react": "^0.93.0"
+    "react-quill": "^2.0.0"
   },
   "devDependencies": {
     "@strapi/typescript-utils": "^4.6.0",
