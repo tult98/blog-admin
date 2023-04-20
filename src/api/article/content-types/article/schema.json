@@ -47,6 +47,14 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "content1": {
+      "type": "customField",
+      "options": {
+        "output": "Markdown",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }
