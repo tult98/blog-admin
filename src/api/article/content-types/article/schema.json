@@ -24,10 +24,6 @@
         "images"
       ]
     },
-    "content": {
-      "type": "richtext",
-      "required": true
-    },
     "category": {
       "type": "relation",
       "relation": "manyToOne",
@@ -47,6 +43,14 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }
